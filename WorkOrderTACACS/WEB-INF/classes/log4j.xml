@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Telcel - Subdirección Sistemas de Gestión y Tecnologías de Información
+Radiomovil DIPSA S.A. de C.V. Todos los Derechos Reservados © 2017.
+-->
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" >
+    
+    <appender name="consola" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p - %m%n" />
+        </layout>
+    </appender>
+    <appender name="info" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/remedy/tomcat/Logs/woTACACS_info.log" />
+        <param name= "Append" value= "true" />
+        <param name= "Threshold" value= "Info" />
+        <param name= "DatePattern" value= "'.'yyyy-MM-dd'.log'" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5p - %m%n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelMatchFilter">
+            <param name="LevelToMatch" value="info"/>
+            <param name="AcceptOnMatch" value="true"/>
+        </filter>
+        <filter class="org.apache.log4j.varia.DenyAllFilter" />
+    </appender>
+    
+    <appender name="error" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/remedy/tomcat/Logs/woTACACS.log" />
+        <param name= "Append" value= "true" />
+        <param name= "Threshold" value= "Error" />
+        <param name= "DatePattern" value= "'.'yyyy-MM-dd'.log'" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5p - %m%n"/>
+        </layout>
+    </appender>
+    
+    <logger name="log4j.xml">
+        <level value="debug" />
+        <appender-ref ref="consola"/>
+        <appender-ref ref="info" />    
+        <appender-ref ref="error" />
+    </logger>
+    
+    <root>
+        <priority value="debug" />
+        <appender-ref ref="consola"/>
+        <appender-ref ref="info" />
+        <appender-ref ref="error" />
+    </root>    
+</log4j:configuration>

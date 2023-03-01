@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/commons-net-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/log4j-1.2.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/Utilerias.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/apache-log4j-extras-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/javacsv.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/RControlClient.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jxl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
